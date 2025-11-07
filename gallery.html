@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery of Moi Forces Academy. Campus life, events, sports, academics, and more.">
+    <title>Gallery - Moi Forces Academy</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo-wrapper">
+                    <img src="images/logo.png" alt="Moi Forces Academy Logo" class="logo">
+                    <div class="school-name">
+                        <h1>Moi Forces Academy</h1>
+                        <p class="tagline">Excellence, Our Commitment</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="academics.html" class="nav-link">Academics</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="activities.html" class="nav-link">Co-curricular</a></li>
+                    <li><a href="boarding.html" class="nav-link">Boarding Life</a></li>
+                    <li><a href="news.html" class="nav-link">News & Events</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&h=600&fit=crop'); margin-top: 80px;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Photo Gallery</h1>
+                <p>Capturing Moments of Excellence</p>
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Gallery</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="section-padding-sm bg-light">
+        <div class="container">
+            <div class="gallery-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="campus">Campus Life</button>
+                <button class="filter-btn" data-filter="academics">Academics</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="cadets">Cadet Training</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="arts">Arts & Culture</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Campus Life -->
+                <div class="gallery-item" data-category="campus" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop" alt="School Campus">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>School Main Building</h3>
+                            <p><i class="fas fa-folder"></i> Campus Life</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(0)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="campus" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop" alt="Library">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>School Library</h3>
+                            <p><i class="fas fa-folder"></i> Campus Life</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(1)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="campus" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop" alt="Dormitory">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Student Dormitories</h3>
+                            <p><i class="fas fa-folder"></i> Campus Life</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(2)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Academics -->
+                <div class="gallery-item" data-category="academics" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop" alt="Classroom">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Modern Classroom</h3>
+                            <p><i class="fas fa-folder"></i> Academics</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(3)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="academics" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop" alt="Science Lab">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Science Laboratory</h3>
+                            <p><i class="fas fa-folder"></i> Academics</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(4)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="academics" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1551135049-8a33b5883817?w=600&h=400&fit=crop" alt="Computer Lab">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Computer Laboratory</h3>
+                            <p><i class="fas fa-folder"></i> Academics</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(5)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Sports -->
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop" alt="Football Match">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Football Championship</h3>
+                            <p><i class="fas fa-folder"></i> Sports</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(6)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop" alt="Basketball Game">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Basketball Tournament</h3>
+                            <p><i class="fas fa-folder"></i> Sports</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(7)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=400&fit=crop" alt="Athletics">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Athletics Competition</h3>
+                            <p><i class="fas fa-folder"></i> Sports</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(8)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Cadets -->
+                <div class="gallery-item" data-category="cadets" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1601116959905-46e67b7ea743?w=600&h=400&fit=crop" alt="Cadet Parade">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Cadet Parade</h3>
+                            <p><i class="fas fa-folder"></i> Cadet Training</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(9)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="cadets" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop" alt="Drill Practice">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Drill Practice Session</h3>
+                            <p><i class="fas fa-folder"></i> Cadet Training</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(10)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="cadets" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop" alt="Field Camp">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Annual Field Camp</h3>
+                            <p><i class="fas fa-folder"></i> Cadet Training</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(11)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Events -->
+                <div class="gallery-item" data-category="events" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop" alt="Graduation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Graduation Ceremony</h3>
+                            <p><i class="fas fa-folder"></i> Events</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(12)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop" alt="Science Fair">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Science & Innovation Fair</h3>
+                            <p><i class="fas fa-folder"></i> Events</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(13)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop" alt="Parents Day">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Parents Day Celebration</h3>
+                            <p><i class="fas fa-folder"></i> Events</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(14)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Arts & Culture -->
+                <div class="gallery-item" data-category="arts" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&h=400&fit=crop" alt="Choir Performance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>School Choir Performance</h3>
+                            <p><i class="fas fa-folder"></i> Arts & Culture</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(15)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="arts" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=400&fit=crop" alt="Drama Production">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Annual Drama Production</h3>
+                            <p><i class="fas fa-folder"></i> Arts & Culture</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(16)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="arts" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=400&fit=crop" alt="Traditional Dance">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Cultural Week Dance</h3>
+                            <p><i class="fas fa-folder"></i> Arts & Culture</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(17)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- More Campus -->
+                <div class="gallery-item" data-category="campus" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=600&h=400&fit=crop" alt="Dining Hall">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>School Dining Hall</h3>
+                            <p><i class="fas fa-folder"></i> Campus Life</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(18)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="campus" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1541339907197-e08fc443ccbf?w=600&h=400&fit=crop" alt="Sports Field">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Sports Complex</h3>
+                            <p><i class="fas fa-folder"></i> Campus Life</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(19)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="campus" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?w=600&h=400&fit=crop" alt="Assembly Ground">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>School Assembly Ground</h3>
+                            <p><i class="fas fa-folder"></i> Campus Life</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(20)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <!-- More Sports -->
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=600&h=400&fit=crop" alt="Swimming">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Swimming Competition</h3>
+                            <p><i class="fas fa-folder"></i> Sports</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(21)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=600&h=400&fit=crop" alt="Volleyball">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Volleyball Championship</h3>
+                            <p><i class="fas fa-folder"></i> Sports</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(22)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1593766787879-e8c78e09cec0?w=600&h=400&fit=crop" alt="Rugby">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Rugby Tournament</h3>
+                            <p><i class="fas fa-folder"></i> Sports</p>
+                        </div>
+                        <button class="view-btn" onclick="openLightbox(23)"><i class="fas fa-search-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Video Gallery</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Watch MFA in Action</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card" data-aos="zoom-in">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop" alt="School Tour">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Virtual School Tour 2025</h3>
+                        <p><i class="fas fa-clock"></i> 5:30 mins</p>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1601116959905-46e67b7ea743?w=600&h=400&fit=crop" alt="Cadet Display">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Cadet Training Highlights</h3>
+                        <p><i class="fas fa-clock"></i> 3:45 mins</p>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop" alt="Graduation">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Graduation Ceremony 2024</h3>
+                        <p><i class="fas fa-clock"></i> 8:20 mins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <button class="lightbox-nav prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-nav next"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-category"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Experience MFA Life Firsthand</h2>
+                <p>Visit our campus and see what makes us special</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light">Schedule a Visit</a>
+                    <a href="admissions.html" class="btn btn-outline-light">Apply for Admission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="MFA Logo">
+                        <h3>Moi Forces Academy</h3>
+                    </div>
+                    <p>Building leaders of tomorrow through excellence, discipline, and patriotism.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="activities.html">Co-curricular</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Alumni Portal</a></li>
+                        <li><a href="#">Parent Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>P.O. Box 1234-00100<br>Nairobi, Kenya</span></li>
+                        <li><i class="fas fa-phone"></i><span>+254 700 000 000</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@mfa.ac.ke</span></li>
+                        <li><i class="fas fa-clock"></i><span>Mon - Fri: 8:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Moi Forces Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    
+    <style>
+        .page-hero {
+            position: relative;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .page-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-hero-content {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+        
+        .page-hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+        }
+        
+        .section-padding-sm {
+            padding: 2rem 0;
+        }
+        
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-info {
+            color: white;
+        }
+        
+        .gallery-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .gallery-info p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .gallery-info i {
+            margin-right: 0.25rem;
+        }
+        
+        .view-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+        }
+        
+        .gallery-item:hover .view-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: var(--transition-normal);
+        }
+        
+        .video-card:hover .play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: white;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .video-info i {
+            color: var(--primary-color);
+            margin-right: 0.25rem;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+        }
+        
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+        
+        .lightbox-caption {
+            text-align: center;
+            color: white;
+            margin-top: 1rem;
+        }
+        
+        .close-lightbox {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            z-index: 10001;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .lightbox-nav.prev {
+            left: 2rem;
+        }
+        
+        .lightbox-nav.next {
+            right: 2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero-content h1 { font-size: 2rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .video-grid { grid-template-columns: 1fr; }
+            .lightbox-nav { width: 40px; height: 40px; font-size: 1.5rem; }
+            .lightbox-nav.prev { left: 0.5rem; }
+            .lightbox-nav.next { right: 0.5rem; }
+        }
+        
+        @media (max-width: 576px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    
+    <script>
+        // Gallery filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.gallery-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Lightbox functionality
+        let currentIndex = 0;
+        const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+        
+        function openLightbox(index) {
+            currentIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = galleryItems[index].querySelector('img');
+            const title = galleryItems[index].querySelector('.gallery-info h3').textContent;
+            const category = galleryItems[index].querySelector('.gallery-info p').textContent;
+            
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-title').textContent = title;
+            document.getElementById('lightbox-category').textContent = category;
+            
+            lightbox.style.display = 'block';
+        }
+        
+        document.querySelector('.close-lightbox').addEventListener('click', function() {
+            document.getElementById('lightbox').style.display = 'none';
+        });
+        
+        document.querySelector('.lightbox-nav.prev').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            openLightbox(currentIndex);
+        });
+        
+        document.querySelector('.lightbox-nav.next').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            openLightbox(currentIndex);
+        });
+        
+        // Close lightbox on outside click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.style.display === 'block') {
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                } else if (e.key === 'ArrowLeft') {
+                    document.querySelector('.lightbox-nav.prev').click();
+                } else if (e.key === 'ArrowRight') {
+                    document.querySelector('.lightbox-nav.next').click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -155,6 +155,39 @@ function initializeHeroSlider() {
     
     let currentSlide = 0;
     const totalSlides = slides.length;
+
+    function extractBackgroundUrl(slide) {
+        const inlineBg = slide.style.backgroundImage || window.getComputedStyle(slide).backgroundImage;
+        const matched = inlineBg.match(/url\(["']?(.*?)["']?\)/i);
+        return matched ? matched[1] : null;
+    }
+
+    function preloadHeroSlideImages() {
+        const preloadPromises = [];
+
+        slides.forEach((slide) => {
+            const bgUrl = extractBackgroundUrl(slide);
+            if (!bgUrl) return;
+
+            preloadPromises.push(new Promise((resolve) => {
+                const img = new Image();
+                img.decoding = 'async';
+                img.loading = 'eager';
+                const timeoutId = window.setTimeout(() => resolve(false), 4000);
+                img.onload = () => {
+                    window.clearTimeout(timeoutId);
+                    resolve(true);
+                };
+                img.onerror = () => {
+                    window.clearTimeout(timeoutId);
+                    resolve(false);
+                };
+                img.src = bgUrl;
+            }));
+        });
+
+        return Promise.allSettled(preloadPromises);
+    }
     
     // Show specific slide
     function showSlide(index) {
@@ -227,8 +260,10 @@ function initializeHeroSlider() {
         }
     });
 
-    // Auto-play slider
-    startAutoPlay();
+    // Warm hero images to reduce lag when transitioning to later slides.
+    preloadHeroSlideImages().finally(() => {
+        startAutoPlay();
+    });
     
     // Pause on hover
     const heroSlider = document.querySelector('.hero-slider');

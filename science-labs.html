@@ -6,7 +6,7 @@
     <title>Science Laboratories - Moi Forces Academy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=2.3">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -41,8 +41,8 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-hero" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(2, 132, 199, 0.95)), url('https://images.unsplash.com/photo-1582719366157-28b7e58a5c5e?w=1920&h=600&fit=crop') center/cover;">
-        <div class="hero-overlay"></div>
+    <section class="page-hero" style="background: url('https://images.unsplash.com/photo-1582719366157-28b7e58a5c5e?w=1920&h=600&fit=crop') center/cover;">
+        
         <div class="container">
             <div class="hero-content">
                 <h1 class="page-title">Science Laboratories</h1>
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <!-- Head of Science Department -->
+    <!-- Science Department Leadership -->
     <section class="section-padding">
         <div class="container">
             <div class="hod-section">
@@ -102,6 +102,26 @@
                     </blockquote>
                 </div>
             </div>
+            <div class="stream-hod-grid">
+                <article class="stream-hod-card">
+                    <h3><i class="fas fa-atom"></i> Physics Stream HOD</h3>
+                    <p><strong>Mr. David Muriithi</strong> - BSc Physics, PGDE, 14 years experience</p>
+                    <p><strong>Responsibilities:</strong> Coordinates practical schedules, calibrates apparatus plans, and leads performance analysis for KCSE physics targets.</p>
+                    <p><strong>Enhancement Initiatives:</strong> Weekly problem-solving clinic, termly lab-skills bootcamp, and inter-school physics challenge coaching.</p>
+                </article>
+                <article class="stream-hod-card">
+                    <h3><i class="fas fa-flask"></i> Chemistry Stream HOD</h3>
+                    <p><strong>Mrs. Ruth Wambui</strong> - MSc Analytical Chemistry, BSc Chemistry, 12 years experience</p>
+                    <p><strong>Responsibilities:</strong> Oversees reagent safety systems, practical progression maps, and quality assurance of laboratory records.</p>
+                    <p><strong>Enhancement Initiatives:</strong> Guided titration mastery labs, peer demonstration teams, and chemistry innovation mini-projects.</p>
+                </article>
+                <article class="stream-hod-card">
+                    <h3><i class="fas fa-microscope"></i> Biology Stream HOD</h3>
+                    <p><strong>Ms. Anne Naliaka</strong> - MSc Biology Education, BSc Biochemistry, 11 years experience</p>
+                    <p><strong>Responsibilities:</strong> Supervises specimen management, inquiry-based practical programs, and lab assessment moderation.</p>
+                    <p><strong>Enhancement Initiatives:</strong> Ecology field observation journals, microscopy competency checkpoints, and student-led life-science showcases.</p>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -121,6 +141,11 @@
                     </div>
                     
                     <p class="lead">Our fully-equipped physics laboratory enables students to explore the fundamental laws of nature through practical experiments in mechanics, electricity, magnetism, optics, and modern physics.</p>
+                    <div class="lab-hod-block">
+                        <h4>Physics HOD Leadership Block</h4>
+                        <p><strong>HOD:</strong> Mr. David Muriithi</p>
+                        <p><strong>Responsibility Focus:</strong> Practical sequencing, apparatus readiness, and exam-oriented experiment precision.</p>
+                    </div>
                     
                     <div class="lab-details">
                         <h4>Laboratory Equipment & Apparatus</h4>
@@ -226,6 +251,11 @@
                     </div>
                     
                     <p class="lead">A modern chemistry laboratory with fume hoods, safety showers, and comprehensive chemical storage. Students engage in practical experiments covering organic, inorganic, and physical chemistry.</p>
+                    <div class="lab-hod-block">
+                        <h4>Chemistry HOD Leadership Block</h4>
+                        <p><strong>HOD:</strong> Mrs. Ruth Wambui</p>
+                        <p><strong>Responsibility Focus:</strong> Safety protocol compliance, reagent management, and mastery of analytical procedures.</p>
+                    </div>
                     
                     <div class="lab-details">
                         <h4>Laboratory Equipment & Apparatus</h4>
@@ -295,6 +325,11 @@
                     </div>
                     
                     <p class="lead">Our biology laboratory is equipped with advanced microscopes, dissection tools, and specimen collections. Students explore life sciences through observation, dissection, and experimentation.</p>
+                    <div class="lab-hod-block">
+                        <h4>Biology HOD Leadership Block</h4>
+                        <p><strong>HOD:</strong> Ms. Anne Naliaka</p>
+                        <p><strong>Responsibility Focus:</strong> Specimen handling standards, inquiry-led practicals, and concept-to-lab integration.</p>
+                    </div>
                     
                     <div class="lab-details">
                         <h4>Laboratory Equipment & Apparatus</h4>
@@ -442,5 +477,40 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <style>
+        .stream-hod-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stream-hod-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
+        .stream-hod-card h3 {
+            color: var(--primary-color);
+            margin-bottom: .6rem;
+            font-size: 1.05rem;
+        }
+
+        .lab-hod-block {
+            background: #fff;
+            border-left: 4px solid var(--primary-color);
+            padding: .85rem 1rem;
+            border-radius: 8px;
+            margin: 1rem 0 1.2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .06);
+        }
+
+        .lab-hod-block h4 {
+            margin-bottom: .4rem;
+            color: var(--primary-color);
+        }
+    </style>
 </body>
 </html>

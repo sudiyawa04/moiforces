@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=2.3">
 </head>
 <body>
     <!-- Header -->
@@ -43,8 +43,8 @@
     </header>
 
     <!-- Page Hero -->
-    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&h=600&fit=crop'); margin-top: 80px;">
-        <div class="hero-overlay"></div>
+    <section class="page-hero" style="background-color: #0f172a; margin-top: 0;">
+        
         <div class="container">
             <div class="page-hero-content">
                 <h1>Academic Excellence</h1>
@@ -100,7 +100,7 @@
             </div>
             
             <div class="departments-grid">
-                <div class="department-card clickable-card" data-aos="zoom-in" onclick="window.location.href='science-labs.html'" style="cursor: pointer;">
+                <div class="department-card clickable-card" data-aos="zoom-in" onclick="window.location.href='science-labs.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='science-labs.html';}" tabindex="0" role="link" aria-label="Open Sciences department details" style="cursor: pointer;">
                     <div class="dept-image">
                         <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop" alt="Sciences Department">
                     </div>
@@ -117,10 +117,11 @@
                         <div class="card-click-hint">
                             <i class="fas fa-arrow-right"></i> Click to explore our laboratories
                         </div>
+                        <a href="science-labs.html" class="card-view-more" aria-label="View more about Sciences department">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="100" onclick="window.location.href='mathematics.html'" style="cursor: pointer;">
+                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="100" onclick="window.location.href='mathematics.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='mathematics.html';}" tabindex="0" role="link" aria-label="Open Mathematics department details" style="cursor: pointer;">
                     <div class="dept-image">
                         <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=300&fit=crop" alt="Mathematics Department">
                     </div>
@@ -137,10 +138,11 @@
                         <div class="card-click-hint">
                             <i class="fas fa-arrow-right"></i> Click to learn more
                         </div>
+                        <a href="mathematics.html" class="card-view-more" aria-label="View more about Mathematics department">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="200" onclick="window.location.href='languages.html'" style="cursor: pointer;">
+                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="200" onclick="window.location.href='languages.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='languages.html';}" tabindex="0" role="link" aria-label="Open Languages and Literature department details" style="cursor: pointer;">
                     <div class="dept-image">
                         <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop" alt="Languages Department">
                     </div>
@@ -157,10 +159,11 @@
                         <div class="card-click-hint">
                             <i class="fas fa-arrow-right"></i> Click to learn more
                         </div>
+                        <a href="languages.html" class="card-view-more" aria-label="View more about Languages and Literature department">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="department-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="300" onclick="window.location.href='technology-ict.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='technology-ict.html';}" tabindex="0" role="link" aria-label="Open Technology and ICT department details" style="cursor: pointer;">
                     <div class="dept-image">
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop" alt="Technology Department">
                     </div>
@@ -174,10 +177,14 @@
                             <li>Programming and coding</li>
                             <li>Digital literacy programs</li>
                         </ul>
+                        <div class="card-click-hint">
+                            <i class="fas fa-arrow-right"></i> Click to learn more
+                        </div>
+                        <a href="technology-ict.html" class="card-view-more" aria-label="View more about Technology and ICT department">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="department-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="400" onclick="window.location.href='humanities.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='humanities.html';}" tabindex="0" role="link" aria-label="Open Humanities department details" style="cursor: pointer;">
                     <div class="dept-image">
                         <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&h=300&fit=crop" alt="Humanities Department">
                     </div>
@@ -191,10 +198,14 @@
                             <li>Research projects</li>
                             <li>Cultural exchange programs</li>
                         </ul>
+                        <div class="card-click-hint">
+                            <i class="fas fa-arrow-right"></i> Click to learn more
+                        </div>
+                        <a href="humanities.html" class="card-view-more" aria-label="View more about Humanities department">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="department-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="department-card clickable-card" data-aos="zoom-in" data-aos-delay="500" onclick="window.location.href='business-studies.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='business-studies.html';}" tabindex="0" role="link" aria-label="Open Business Studies department details" style="cursor: pointer;">
                     <div class="dept-image">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop" alt="Business Department">
                     </div>
@@ -208,6 +219,10 @@
                             <li>Business simulations</li>
                             <li>Industry partnerships</li>
                         </ul>
+                        <div class="card-click-hint">
+                            <i class="fas fa-arrow-right"></i> Click to learn more
+                        </div>
+                        <a href="business-studies.html" class="card-view-more" aria-label="View more about Business Studies department">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -273,23 +288,25 @@
             </div>
             
             <div class="resources-grid">
-                <div class="resource-card" data-aos="fade-up">
+                <div class="resource-card clickable-card" data-aos="fade-up" onclick="window.location.href='library-resources.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='library-resources.html';}" tabindex="0" role="link" aria-label="Open Modern Library resource details" style="cursor: pointer;">
                     <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&h=400&fit=crop" alt="Library">
                     <div class="resource-content">
                         <h3><i class="fas fa-book-reader"></i> Modern Library</h3>
                         <p>Extensive collection of over 10,000 books, digital resources, and study spaces for independent learning.</p>
+                        <a href="library-resources.html" class="card-view-more" aria-label="View more about Modern Library resources">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="resource-card clickable-card" data-aos="fade-up" data-aos-delay="100" onclick="window.location.href='computer-labs.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='computer-labs.html';}" tabindex="0" role="link" aria-label="Open Computer Labs resource details" style="cursor: pointer;">
                     <img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?w=600&h=400&fit=crop" alt="Computer Lab">
                     <div class="resource-content">
                         <h3><i class="fas fa-desktop"></i> Computer Labs</h3>
                         <p>Three fully-equipped computer laboratories with high-speed internet and modern software.</p>
+                        <a href="computer-labs.html" class="card-view-more" aria-label="View more about Computer Labs">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="resource-card clickable-card" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href='science-labs.html'" style="cursor: pointer;">
+                <div class="resource-card clickable-card" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href='science-labs.html'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='science-labs.html';}" tabindex="0" role="link" aria-label="Open Science Laboratories resource details" style="cursor: pointer;">
                     <img src="https://images.unsplash.com/photo-1582719366157-28b7e58a5c5e?w=600&h=400&fit=crop" alt="Science Lab">
                     <div class="resource-content">
                         <h3><i class="fas fa-microscope"></i> Science Laboratories</h3>
@@ -297,6 +314,7 @@
                         <div class="card-click-hint">
                             <i class="fas fa-arrow-right"></i> Click to explore our labs
                         </div>
+                        <a href="science-labs.html" class="card-view-more" aria-label="View more about Science Laboratories">View more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -307,9 +325,9 @@
     <section class="section-padding bg-light">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Student Support Programs</h2>
+                <h2 class="section-title">We're Here to Support You</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Comprehensive Support for Holistic Student Development</p>
+                <p class="section-subtitle">Because growing up is hard - you don't have to do it alone</p>
             </div>
 
             <!-- Guidance and Counselling Program -->
@@ -318,8 +336,8 @@
                     <div class="program-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Guidance and Counselling Program</h3>
-                    <p class="program-intro">At Moi Forces Academy, we understand that academic success goes hand-in-hand with emotional and mental well-being. Our comprehensive Guidance and Counselling Program provides students with the support, guidance, and resources they need to navigate their academic journey and personal development.</p>
+                    <h3>Guidance and Counselling</h3>
+                    <p class="program-intro">Let's be honest - teenage years can be tough. Between exams, peer pressure, career decisions, and everything else life throws at you, it's normal to feel overwhelmed sometimes. That's exactly why Mrs. Mbaabu and our counselling team are here. This isn't about fixing you (you're not broken!). It's about having someone in your corner who listens, understands, and helps you figure things out.</p>
                     
                     <div class="program-features">
                         <div class="feature-item">
@@ -327,8 +345,8 @@
                                 <i class="fas fa-calendar-week"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Weekly Motivational Sessions</h4>
-                                <p>Every Monday, students gather for inspiring talks from distinguished guest speakers, including professionals, alumni, motivational speakers, and industry leaders. These sessions cover topics such as career guidance, life skills, personal development, mental health awareness, and academic excellence strategies.</p>
+                                <h4>Monday Motivation</h4>
+                                <p>Every Monday morning, we bring in someone interesting to talk to you - could be an MFA alumnus who's now a doctor, an entrepreneur sharing their startup journey, or a mental health expert giving practical tips. These aren't boring lectures. They're real conversations with real people who've been where you are.</p>
                             </div>
                         </div>
 
@@ -337,8 +355,8 @@
                                 <i class="fas fa-user-graduate"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Individual Counselling</h4>
-                                <p>One-on-one sessions with trained counsellors to address personal challenges, academic concerns, career planning, and emotional well-being in a confidential and supportive environment.</p>
+                                <h4>One-on-One Talks</h4>
+                                <p>Sometimes you just need to talk to someone privately. Maybe you're struggling with a subject, dealing with family issues, or just feeling stressed. Whatever it is, you can book time with Mrs. Mbaabu or one of our counsellors. Everything stays confidential - this is your safe space.</p>
                             </div>
                         </div>
 
@@ -347,8 +365,9 @@
                                 <i class="fas fa-users"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Group Counselling & Workshops</h4>
+                                <h4>Group Sessions & Workshops</h4>
                                 <p>Interactive group sessions and workshops on stress management, study skills, peer relationships, decision-making, and preparing for life after secondary school.</p>
+                                <p>You know what? You're not the only one stressing about that exam or dealing with friendship drama. Group sessions help you realize others are going through similar things. We cover everything from study techniques that actually work, to managing stress without losing your mind, to figuring out life after Form 4.</p>
                             </div>
                         </div>
 
@@ -357,8 +376,8 @@
                                 <i class="fas fa-compass"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Career Guidance</h4>
-                                <p>Comprehensive career counselling, aptitude assessments, university selection guidance, and exposure to various career paths through career fairs and mentorship programs.</p>
+                                <h4>Figuring Out Your Future</h4>
+                                <p>Medicine? Engineering? Teaching? Business? Or something completely different? We'll help you explore options, understand what different careers actually involve (not just what you see on TV), and make informed choices about university and your future. No pressure, just honest guidance.</p>
                             </div>
                         </div>
                     </div>
@@ -727,6 +746,28 @@
         
         .resource-content i {
             margin-right: 0.5rem;
+        }
+
+        .card-view-more {
+            margin-top: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        .card-view-more:hover {
+            color: var(--secondary-color);
+            gap: 0.55rem;
+        }
+
+        .card-view-more:focus-visible,
+        .clickable-card:focus-visible {
+            outline: 3px solid rgba(14, 165, 233, 0.45);
+            outline-offset: 3px;
+            border-radius: 10px;
         }
         
         @media (max-width: 992px) {

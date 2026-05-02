@@ -20,418 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css?v=2.0">
+    <link rel="stylesheet" href="css/styles.css?v=2.4">
     
-    <!-- Loading Screen Styles -->
-    <style>
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1d3a 50%, #0f1729 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-        }
-        
-        /* Animated background particles */
-        #loading-screen::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.05) 0%, transparent 70%);
-            animation: backgroundPulse 8s ease-in-out infinite alternate;
-        }
-        
-        @keyframes backgroundPulse {
-            0%, 100% { 
-                transform: scale(1) rotate(0deg);
-                opacity: 1;
-            }
-            50% { 
-                transform: scale(1.1) rotate(5deg);
-                opacity: 0.8;
-            }
-        }
-        
-        #loading-screen.fade-out {
-            opacity: 0;
-            transform: scale(1.1);
-            pointer-events: none;
-        }
-        
-        .loading-container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-        
-        /* Icon wrapper with hexagon background */
-        .loading-icon-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2.5rem;
-        }
-        
-        /* Hexagon background */
-        .hexagon-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 180px;
-            height: 180px;
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.05));
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            animation: hexagonRotate 12s linear infinite;
-            border: 2px solid rgba(14, 165, 233, 0.2);
-        }
-        
-        @keyframes hexagonRotate {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        
-        /* Main icon */
-        .loading-icon {
-            font-size: 7rem;
-            background: linear-gradient(135deg, #0EA5E9, #38BDF8, #0EA5E9);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 40px rgba(14, 165, 233, 0.8)) 
-                    drop-shadow(0 0 20px rgba(56, 189, 248, 0.6));
-            animation: militaryPulse 3s ease-in-out infinite, gradientShift 4s ease infinite;
-            position: relative;
-            z-index: 3;
-        }
-        
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        /* Orbiting elements with staggered animations */
-        .orbit-ring {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid transparent;
-            border-top: 2px solid rgba(14, 165, 233, 0.6);
-            border-right: 2px solid rgba(56, 189, 248, 0.4);
-            border-radius: 50%;
-            animation: orbitSpin 3s linear infinite;
-        }
-        
-        .orbit-ring:nth-child(1) {
-            width: 160px;
-            height: 160px;
-            animation-duration: 4s;
-        }
-        
-        .orbit-ring:nth-child(2) {
-            width: 210px;
-            height: 210px;
-            animation-duration: 6s;
-            animation-direction: reverse;
-        }
-        
-        .orbit-ring:nth-child(3) {
-            width: 260px;
-            height: 260px;
-            animation-duration: 8s;
-            border-top: 2px solid rgba(56, 189, 248, 0.5);
-            border-right: 2px solid rgba(14, 165, 233, 0.3);
-        }
-        
-        @keyframes orbitSpin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        
-        /* Pulsing dot indicators */
-        .orbit-dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: #0EA5E9;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(14, 165, 233, 0.8);
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .orbit-ring:nth-child(1) .orbit-dot {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        .orbit-ring:nth-child(2) .orbit-dot {
-            animation: pulse 2s ease-in-out infinite 0.5s;
-            background: #38BDF8;
-        }
-        
-        .orbit-ring:nth-child(3) .orbit-dot {
-            animation: pulse 2s ease-in-out infinite 1s;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { 
-                transform: translateX(-50%) scale(1);
-                opacity: 1;
-            }
-            50% { 
-                transform: translateX(-50%) scale(1.5);
-                opacity: 0.7;
-            }
-        }
-        
-        @keyframes militaryPulse {
-            0%, 100% {
-                transform: scale(1) rotate(0deg);
-            }
-            25% {
-                transform: scale(1.08) rotate(-3deg);
-            }
-            50% {
-                transform: scale(1.15) rotate(0deg);
-            }
-            75% {
-                transform: scale(1.08) rotate(3deg);
-            }
-        }
-        
-        /* Typography */
-        .loading-text {
-            color: #ffffff;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            text-shadow: 0 0 30px rgba(14, 165, 233, 0.6),
-                         0 0 60px rgba(14, 165, 233, 0.3);
-            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
-        }
-        
-        .loading-subtext {
-            color: #0EA5E9;
-            font-size: 1.1rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
-        }
-        
-        .loading-motto {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            font-style: italic;
-            margin-top: 1rem;
-            letter-spacing: 2px;
-            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.7s both;
-        }
-        
-        /* Enhanced Progress bar */
-        .progress-container {
-            width: 400px;
-            height: 4px;
-            background: rgba(14, 165, 233, 0.1);
-            border-radius: 10px;
-            margin-top: 2.5rem;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-            position: relative;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.9s both;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #0EA5E9, #38BDF8, #0EA5E9);
-            background-size: 200% 100%;
-            border-radius: 10px;
-            animation: loadProgress 10s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-                       shimmer 2s linear infinite;
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.8),
-                       0 0 40px rgba(14, 165, 233, 0.4);
-            position: relative;
-        }
-        
-        .progress-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, 
-                transparent, 
-                rgba(255, 255, 255, 0.4), 
-                transparent);
-            animation: progressGleam 2s ease-in-out infinite;
-        }
-        
-        @keyframes progressGleam {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(200%); }
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes loadProgress {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-        
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Decorative corner elements */
-        .corner-decoration {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border: 2px solid rgba(14, 165, 233, 0.2);
-        }
-        
-        .corner-decoration.top-left {
-            top: 30px;
-            left: 30px;
-            border-right: none;
-            border-bottom: none;
-            animation: cornerGlow 3s ease-in-out infinite;
-        }
-        
-        .corner-decoration.top-right {
-            top: 30px;
-            right: 30px;
-            border-left: none;
-            border-bottom: none;
-            animation: cornerGlow 3s ease-in-out infinite 0.5s;
-        }
-        
-        .corner-decoration.bottom-left {
-            bottom: 30px;
-            left: 30px;
-            border-right: none;
-            border-top: none;
-            animation: cornerGlow 3s ease-in-out infinite 1s;
-        }
-        
-        .corner-decoration.bottom-right {
-            bottom: 30px;
-            right: 30px;
-            border-left: none;
-            border-top: none;
-            animation: cornerGlow 3s ease-in-out infinite 1.5s;
-        }
-        
-        @keyframes cornerGlow {
-            0%, 100% { 
-                opacity: 0.3;
-                box-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
-            }
-            50% { 
-                opacity: 1;
-                box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
-            }
-        }
-        
-        /* Floating particles */
-        .particle {
-            position: absolute;
-            color: rgba(14, 165, 233, 0.3);
-            font-size: 0.5rem;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .particle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { top: 25%; right: 15%; animation-delay: 1s; }
-        .particle:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 2s; }
-        .particle:nth-child(4) { bottom: 30%; right: 10%; animation-delay: 1.5s; }
-        .particle:nth-child(5) { top: 40%; left: 5%; animation-delay: 0.5s; }
-        .particle:nth-child(6) { top: 60%; right: 8%; animation-delay: 2.5s; }
-        
-        @keyframes float {
-            0%, 100% { 
-                transform: translateY(0) scale(1);
-                opacity: 0.3;
-            }
-            50% { 
-                transform: translateY(-20px) scale(1.2);
-                opacity: 0.8;
-            }
-        }
-    </style>
 </head>
-<body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <!-- Corner decorations -->
-        <div class="corner-decoration top-left"></div>
-        <div class="corner-decoration top-right"></div>
-        <div class="corner-decoration bottom-left"></div>
-        <div class="corner-decoration bottom-right"></div>
-        
-        <!-- Floating particles -->
-        <i class="fas fa-circle particle"></i>
-        <i class="fas fa-circle particle"></i>
-        <i class="fas fa-circle particle"></i>
-        <i class="fas fa-circle particle"></i>
-        <i class="fas fa-circle particle"></i>
-        <i class="fas fa-circle particle"></i>
-        
-        <div class="loading-container">
-            <div class="loading-icon-wrapper">
-                <div class="hexagon-bg"></div>
-                <div class="orbit-ring">
-                    <div class="orbit-dot"></div>
-                </div>
-                <div class="orbit-ring">
-                    <div class="orbit-dot"></div>
-                </div>
-                <div class="orbit-ring">
-                    <div class="orbit-dot"></div>
-                </div>
-                <i class="fas fa-medal loading-icon"></i>
-            </div>
-            <div class="loading-text">Moi Forces Academy</div>
-            <div class="loading-subtext">Est. 1978</div>
-            <div class="loading-motto">Excellence, Our Commitment</div>
-            <div class="progress-container">
-                <div class="progress-bar"></div>
-            </div>
-        </div>
-    </div>
-    
+<body class="home-page">
     <!-- Header & Navigation -->
     <header class="header" id="header">
         <nav class="navbar">
@@ -466,38 +58,38 @@
     <!-- Hero Section with Slideshow -->
     <section class="hero" id="home">
         <div class="hero-slider">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&h=1080&fit=crop')">
-                <div class="hero-overlay"></div>
+            <div class="hero-slide active" style="background-image: url('images/EDITED-63.jpg')">
+                
                 <div class="hero-content">
                     <h2 class="hero-title" data-aos="fade-up">Welcome to Moi Forces Academy</h2>
-                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Building Leaders of Tomorrow Through Excellence, Discipline & Patriotism</p>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Where we've been shaping young minds into tomorrow's leaders since 1975</p>
                     <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
-                        <a href="about.html" class="btn btn-outline">Learn More</a>
+                        <a href="admissions.html" class="btn btn-primary">Join Us</a>
+                        <a href="about.html" class="btn btn-outline">Our Story</a>
                     </div>
                 </div>
             </div>
             
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1920&h=1080&fit=crop')">
-                <div class="hero-overlay"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&h=1080&fit=crop')">
+                
                 <div class="hero-content">
-                    <h2 class="hero-title" data-aos="fade-up">Academic Excellence</h2>
-                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Nurturing Minds, Shaping Futures</p>
+                    <h2 class="hero-title" data-aos="fade-up">Education That Goes Beyond Books</h2>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Our students don't just pass exams - they become thinkers, problem-solvers, and leaders</p>
                     <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                        <a href="academics.html" class="btn btn-primary">Explore Academics</a>
-                        <a href="gallery.html" class="btn btn-outline">View Gallery</a>
+                        <a href="academics.html" class="btn btn-primary">See What We Teach</a>
+                        <a href="gallery.html" class="btn btn-outline">View Photos</a>
                     </div>
                 </div>
             </div>
             
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1920&h=1080&fit=crop')">
-                <div class="hero-overlay"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1920&h=1080&fit=crop')">
+                
                 <div class="hero-content">
-                    <h2 class="hero-title" data-aos="fade-up">Holistic Development</h2>
-                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Sports, Arts, Leadership & Character Building</p>
+                    <h2 class="hero-title" data-aos="fade-up">Life at MFA is More Than Classes</h2>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">From the sports field to the music room, we believe in developing the whole person</p>
                     <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                        <a href="activities.html" class="btn btn-primary">Discover Activities</a>
-                        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                        <a href="activities.html" class="btn btn-primary">See What We Do</a>
+                        <a href="contact.html" class="btn btn-outline">Visit Us</a>
                     </div>
                 </div>
             </div>
@@ -518,70 +110,42 @@
         </div>
     </section>
 
-    <!-- Quick Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card" data-aos="fade-up">
-                    <i class="fas fa-graduation-cap stat-icon"></i>
-                    <h3 class="stat-number" data-count="2000">0</h3>
-                    <p class="stat-label">Students</p>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-chalkboard-teacher stat-icon"></i>
-                    <h3 class="stat-number" data-count="150">0</h3>
-                    <p class="stat-label">Staff Members</p>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-trophy stat-icon"></i>
-                    <h3 class="stat-number" data-count="50">0</h3>
-                    <p class="stat-label">Years of Excellence</p>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-award stat-icon"></i>
-                    <h3 class="stat-number" data-count="98">0</h3>
-                    <p class="stat-label">% Success Rate</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
     <section class="about-preview section-padding" id="about-preview">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">About Moi Forces Academy</h2>
+                <h2 class="section-title">Who We Are</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">A Legacy of Excellence, Discipline, and Leadership</p>
+                <p class="section-subtitle">50 years of shaping Kenya's future, one student at a time</p>
             </div>
             
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
-                    <h3>Building Future Leaders</h3>
-                    <p>Moi Forces Academy stands as a beacon of educational excellence in Kenya, combining rigorous academic standards with military discipline and character development. Founded with the vision of producing well-rounded citizens, our institution has consistently delivered outstanding results while nurturing leadership, patriotism, and moral values.</p>
+                    <h3>We're More Than Just a School</h3>
+                    <p>Since 1975, MFA has been the place where bright young Kenyans come to discover who they really are. Yes, we push our students academically - our results speak for themselves. But what really sets us apart is how we help each student find their own path, whether that's in the sciences, arts, sports, or leadership.</p>
                     
-                    <p>We pride ourselves on our holistic approach to education, where academic achievement goes hand-in-hand with physical fitness, artistic expression, and community service. Our students emerge as confident, disciplined, and compassionate leaders ready to serve their nation and the world.</p>
+                    <p>Walk through our campus on any given day and you'll see what makes us different. There's the Form 3 student helping a Form 1 with Math. The debate team practicing for nationals. Our cadet corps marching with pride. The art students painting the sunset. This is where hard work meets discovery, where discipline builds confidence, and where lifelong friendships are formed.</p>
                     
                     <div class="core-pillars">
                         <div class="pillar">
                             <i class="fas fa-book-open"></i>
-                            <h4>Academic Excellence</h4>
+                            <h4>Solid Academics</h4>
                         </div>
                         <div class="pillar">
                             <i class="fas fa-shield-alt"></i>
-                            <h4>Discipline & Integrity</h4>
+                            <h4>Strong Values</h4>
                         </div>
                         <div class="pillar">
                             <i class="fas fa-users"></i>
-                            <h4>Leadership Development</h4>
+                            <h4>Real Leadership</h4>
                         </div>
                         <div class="pillar">
                             <i class="fas fa-flag"></i>
-                            <h4>Patriotism</h4>
+                            <h4>Kenyan Pride</h4>
                         </div>
                     </div>
                     
-                    <a href="about.html" class="btn btn-primary">Discover Our Story</a>
+                    <a href="about.html" class="btn btn-primary">Read Our Full Story</a>
                 </div>
                 
                 <div class="about-image" data-aos="fade-left">
@@ -608,36 +172,28 @@
             
             <div class="programs-grid">
                 <div class="program-card" data-aos="zoom-in">
-                    <div class="program-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&h=450&fit=crop" alt="Science laboratory session" class="program-image">
                     <h3>Sciences</h3>
                     <p>Physics, Chemistry, Biology with state-of-the-art laboratories and experienced faculty.</p>
                     <a href="academics.html#sciences" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="program-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="program-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=700&h=450&fit=crop" alt="Students learning mathematics" class="program-image">
                     <h3>Mathematics</h3>
                     <p>Pure and applied mathematics programs designed to develop critical thinking and problem-solving skills.</p>
                     <a href="academics.html#mathematics" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="program-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="program-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=700&h=450&fit=crop" alt="Students in language and humanities class" class="program-image">
                     <h3>Languages & Humanities</h3>
                     <p>English, Kiswahili, History, Geography, and Religious Studies for well-rounded education.</p>
                     <a href="academics.html#humanities" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="program-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="program-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&h=450&fit=crop" alt="Students in technology class" class="program-image">
                     <h3>Technology & Technical Studies</h3>
                     <p>Computer Studies, Business, and Technical subjects preparing students for the digital age.</p>
                     <a href="academics.html#technology" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
@@ -930,22 +486,6 @@
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Main JavaScript -->
-    <script src="js/script.js"></script>
-    
-    <!-- Loading Screen Script -->
-    <script>
-        // Hide loading screen after 10 seconds
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const loadingScreen = document.getElementById('loading-screen');
-                loadingScreen.classList.add('fade-out');
-                
-                // Remove from DOM after fade out animation completes
-                setTimeout(function() {
-                    loadingScreen.style.display = 'none';
-                }, 500); // Match the CSS transition duration
-            }, 10000); // 10 seconds
-        });
-    </script>
+    <script src="js/script.js?v=2.4"></script>
 </body>
 </html>

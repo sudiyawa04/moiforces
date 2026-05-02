@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Admission Form - MOI Forces Academy</title>
+    <meta name="description" content="Apply online for admission to MOI Forces Academy. Submit your application easily with our online form.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.png" alt="MFA Logo" width="40" height="40" class="d-inline-block align-top me-2">
+                MOI Forces Academy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Admissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" style="margin-top: 100px;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h1 class="display-4 text-primary mb-4">Online Admission Application</h1>
+                    <p class="lead">Apply for admission to MOI Forces Academy by filling out this comprehensive form.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-header bg-primary text-white py-4">
+                            <h3 class="mb-0 text-center">
+                                <i class="fas fa-graduation-cap me-2"></i>
+                                Admission Application Form
+                            </h3>
+                        </div>
+                        <div class="card-body p-5">
+                            <form id="admissionForm" enctype="multipart/form-data">
+                                <!-- Student Information -->
+                                <div class="section-header mb-4">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-user me-2"></i>Student Information
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="middleName" class="form-label">Middle Name</label>
+                                        <input type="text" class="form-control" id="middleName" name="middleName">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="dateOfBirth" class="form-label">Date of Birth *</label>
+                                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="gender" class="form-label">Gender *</label>
+                                        <select class="form-select" id="gender" name="gender" required>
+                                            <option value="">Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="nationality" class="form-label">Nationality *</label>
+                                        <input type="text" class="form-control" id="nationality" name="nationality" value="Kenyan" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="religion" class="form-label">Religion</label>
+                                        <input type="text" class="form-control" id="religion" name="religion">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="admissionClass" class="form-label">Applying for Class/Grade *</label>
+                                        <select class="form-select" id="admissionClass" name="admissionClass" required>
+                                            <option value="">Select Class/Grade</option>
+                                            <option value="pp1">Pre-Primary 1</option>
+                                            <option value="pp2">Pre-Primary 2</option>
+                                            <option value="grade1">Grade 1</option>
+                                            <option value="grade2">Grade 2</option>
+                                            <option value="grade3">Grade 3</option>
+                                            <option value="grade4">Grade 4</option>
+                                            <option value="grade5">Grade 5</option>
+                                            <option value="grade6">Grade 6</option>
+                                            <option value="grade7">Grade 7</option>
+                                            <option value="grade8">Grade 8</option>
+                                            <option value="form1">Form 1</option>
+                                            <option value="form2">Form 2</option>
+                                            <option value="form3">Form 3</option>
+                                            <option value="form4">Form 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="academicYear" class="form-label">Academic Year *</label>
+                                        <select class="form-select" id="academicYear" name="academicYear" required>
+                                            <option value="">Select Academic Year</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Parent/Guardian Information -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-users me-2"></i>Parent/Guardian Information
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fatherName" class="form-label">Father's Full Name *</label>
+                                        <input type="text" class="form-control" id="fatherName" name="fatherName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="motherName" class="form-label">Mother's Full Name *</label>
+                                        <input type="text" class="form-control" id="motherName" name="motherName" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fatherOccupation" class="form-label">Father's Occupation</label>
+                                        <input type="text" class="form-control" id="fatherOccupation" name="fatherOccupation">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="motherOccupation" class="form-label">Mother's Occupation</label>
+                                        <input type="text" class="form-control" id="motherOccupation" name="motherOccupation">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guardianPhone" class="form-label">Primary Contact Phone *</label>
+                                        <input type="tel" class="form-control" id="guardianPhone" name="guardianPhone" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guardianEmail" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="guardianEmail" name="guardianEmail" required>
+                                    </div>
+                                </div>
+
+                                <!-- Address Information -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-map-marker-alt me-2"></i>Address Information
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="physicalAddress" class="form-label">Physical Address *</label>
+                                        <textarea class="form-control" id="physicalAddress" name="physicalAddress" rows="3" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="postalAddress" class="form-label">Postal Address</label>
+                                        <input type="text" class="form-control" id="postalAddress" name="postalAddress">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="postalCode" class="form-label">Postal Code</label>
+                                        <input type="text" class="form-control" id="postalCode" name="postalCode">
+                                    </div>
+                                </div>
+
+                                <!-- Previous School Information -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-school me-2"></i>Previous School Information
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 mb-3">
+                                        <label for="previousSchool" class="form-label">Previous School Name</label>
+                                        <input type="text" class="form-control" id="previousSchool" name="previousSchool">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="lastClassAttended" class="form-label">Last Class Attended</label>
+                                        <input type="text" class="form-control" id="lastClassAttended" name="lastClassAttended">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="reasonForTransfer" class="form-label">Reason for Transfer</label>
+                                        <textarea class="form-control" id="reasonForTransfer" name="reasonForTransfer" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Document Upload -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-file-upload me-2"></i>Required Documents
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="birthCertificate" class="form-label">Birth Certificate *</label>
+                                        <input type="file" class="form-control" id="birthCertificate" name="birthCertificate" accept=".pdf,.jpg,.jpeg,.png" required>
+                                        <div class="form-text">Upload scanned copy (PDF, JPG, PNG)</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="passportPhoto" class="form-label">Passport Photo *</label>
+                                        <input type="file" class="form-control" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required>
+                                        <div class="form-text">Upload recent passport-size photo</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="previousResults" class="form-label">Previous Academic Results</label>
+                                        <input type="file" class="form-control" id="previousResults" name="previousResults" accept=".pdf,.jpg,.jpeg,.png">
+                                        <div class="form-text">Upload last academic results/report card</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="medicalForm" class="form-label">Medical Form</label>
+                                        <input type="file" class="form-control" id="medicalForm" name="medicalForm" accept=".pdf,.jpg,.jpeg,.png">
+                                        <div class="form-text">Upload completed medical examination form</div>
+                                    </div>
+                                </div>
+
+                                <!-- Special Needs/Medical Information -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-heartbeat me-2"></i>Medical & Special Needs Information
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="medicalConditions" class="form-label">Any Medical Conditions or Allergies</label>
+                                        <textarea class="form-control" id="medicalConditions" name="medicalConditions" rows="3" placeholder="Please list any medical conditions, allergies, or special dietary requirements"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="specialNeeds" class="form-label">Special Educational Needs</label>
+                                        <textarea class="form-control" id="specialNeeds" name="specialNeeds" rows="3" placeholder="Please describe any learning disabilities or special educational needs"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Emergency Contact -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-phone-alt me-2"></i>Emergency Contact
+                                    </h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="emergencyContactName" class="form-label">Emergency Contact Name *</label>
+                                        <input type="text" class="form-control" id="emergencyContactName" name="emergencyContactName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="emergencyContactRelation" class="form-label">Relationship *</label>
+                                        <input type="text" class="form-control" id="emergencyContactRelation" name="emergencyContactRelation" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="emergencyContactPhone" class="form-label">Emergency Contact Phone *</label>
+                                        <input type="tel" class="form-control" id="emergencyContactPhone" name="emergencyContactPhone" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="emergencyContactEmail" class="form-label">Emergency Contact Email</label>
+                                        <input type="email" class="form-control" id="emergencyContactEmail" name="emergencyContactEmail">
+                                    </div>
+                                </div>
+
+                                <!-- Declaration -->
+                                <div class="section-header mb-4 mt-5">
+                                    <h4 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-check-circle me-2"></i>Declaration
+                                    </h4>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="declarationCheck" name="declarationCheck" required>
+                                    <label class="form-check-label" for="declarationCheck">
+                                        I hereby declare that the information provided in this application is true and complete to the best of my knowledge. 
+                                        I understand that any false information may result in the rejection of this application or dismissal from the school.
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" name="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I agree to the school's terms and conditions, including the fee structure and disciplinary policies.
+                                    </label>
+                                </div>
+
+                                <!-- Submit Buttons -->
+                                <div class="d-flex justify-content-between">
+                                    <a href="../index.html" class="btn btn-outline-secondary btn-lg">
+                                        <i class="fas fa-arrow-left me-2"></i>Back to Home
+                                    </a>
+                                    <div>
+                                        <button type="reset" class="btn btn-outline-warning btn-lg me-3">
+                                            <i class="fas fa-redo me-2"></i>Reset Form
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-lg">
+                                            <i class="fas fa-paper-plane me-2"></i>Submit Application
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-primary text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>MOI Forces Academy</h5>
+                    <p>Excellence in Education Since 1978</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 MOI Forces Academy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Additional form validation and handling
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Application submitted successfully! You will receive a confirmation email shortly.');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                // Optionally redirect to a thank you page
+                // window.location.href = 'thank-you.html';
+            }, 3000);
+        });
+        
+        // File upload validation
+        const fileInputs = document.querySelectorAll('input[type="file"]');
+        fileInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const maxSize = 5 * 1024 * 1024; // 5MB
+                    if (file.size > maxSize) {
+                        alert('File size must be less than 5MB');
+                        this.value = '';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

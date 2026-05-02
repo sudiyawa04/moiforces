@@ -6,7 +6,7 @@
     <title>Languages & Literature Department - Moi Forces Academy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=2.3">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -41,8 +41,8 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-hero" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(2, 132, 199, 0.95)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1920&h=600&fit=crop') center/cover;">
-        <div class="hero-overlay"></div>
+    <section class="page-hero" style="background: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1920&h=600&fit=crop') center/cover;">
+        
         <div class="container">
             <div class="hero-content">
                 <h1 class="page-title">Languages & Literature Department</h1>
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <!-- Head of Department -->
+    <!-- Department Leadership -->
     <section class="section-padding">
         <div class="container">
             <div class="hod-section">
@@ -101,6 +101,26 @@
                         "Language is the dress of thought. Through literature, we explore the human condition, develop critical thinking, and learn to express ourselves with clarity and creativity. Our goal is to nurture articulate, literate, and culturally aware global citizens."
                     </blockquote>
                 </div>
+            </div>
+            <div class="stream-hod-grid">
+                <article class="stream-hod-card">
+                    <h3><i class="fas fa-book-open"></i> English Stream HOD</h3>
+                    <p><strong>Mrs. Jane Akinyi</strong> - MA English Literature, 14 years experience</p>
+                    <p><strong>Responsibilities:</strong> Leads language mastery plans, literary text pacing, and writing assessment moderation.</p>
+                    <p><strong>Enhancement Initiatives:</strong> Argumentative writing lab, reading circles, and performance-tracking clinics.</p>
+                </article>
+                <article class="stream-hod-card">
+                    <h3><i class="fas fa-flag"></i> Kiswahili Stream HOD</h3>
+                    <p><strong>Mr. Hassan Mohamed</strong> - BA Kiswahili & Education, 10 years experience</p>
+                    <p><strong>Responsibilities:</strong> Coordinates Sarufi/Fasihi coverage, oral assessment standards, and departmental language week programs.</p>
+                    <p><strong>Enhancement Initiatives:</strong> Insha feedback workshops, mashairi recitation forums, and cross-school Kiswahili debates.</p>
+                </article>
+                <article class="stream-hod-card">
+                    <h3><i class="fas fa-globe"></i> French Stream HOD</h3>
+                    <p><strong>Ms. Marie Dubois</strong> - BA French Education, DELF Examiner</p>
+                    <p><strong>Responsibilities:</strong> Oversees conversation proficiency benchmarks, listening labs, and optional-language progression.</p>
+                    <p><strong>Enhancement Initiatives:</strong> Francophone culture club, DELF prep clinic, and immersive speaking sessions.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -365,5 +385,26 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <style>
+        .stream-hod-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stream-hod-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
+        .stream-hod-card h3 {
+            color: var(--primary-color);
+            margin-bottom: .6rem;
+            font-size: 1.05rem;
+        }
+    </style>
 </body>
 </html>

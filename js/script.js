@@ -5,6 +5,7 @@
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', function() {
+    initializeFirstVisitLoader();
     initializeNavigation();
     initializeHeroBackgroundCleanup();
     initializeHeroSlider();
@@ -14,6 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAOS();
     initializeLazyLoading();
 });
+
+// ===== FIRST VISIT LOADER =====
+function initializeFirstVisitLoader() {
+    const root = document.documentElement;
+    const loader = document.getElementById('pageLoader');
+    const shouldShowLoader = root.classList.contains('show-initial-loader');
+
+    if (!loader || !shouldShowLoader) return;
+
+    window.setTimeout(() => {
+        loader.classList.add('is-hiding');
+        window.setTimeout(() => {
+            root.classList.remove('show-initial-loader');
+            loader.style.display = 'none';
+        }, 650);
+    }, 5000);
+}
 
 // ===== HERO BACKGROUND CLEANUP =====
 function initializeHeroBackgroundCleanup() {

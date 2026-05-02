@@ -22,12 +22,41 @@
     <link rel="preload" as="image" href="images/EDITED-63.jpg">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&h=1080&fit=crop" crossorigin>
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1920&h=1080&fit=crop" crossorigin>
+    <script>
+        (function() {
+            try {
+                if (!localStorage.getItem('mfa_loader_seen')) {
+                    document.documentElement.classList.add('show-initial-loader');
+                    localStorage.setItem('mfa_loader_seen', 'true');
+                }
+            } catch (error) {
+                document.documentElement.classList.add('show-initial-loader');
+            }
+        })();
+    </script>
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css?v=2.4">
     
 </head>
 <body class="home-page">
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-inner">
+            <div class="loader-emblem-wrap">
+                <img src="images/logo.png" alt="Moi Forces Academy emblem" class="loader-emblem">
+                <span class="loader-ring"></span>
+            </div>
+            <h2 class="loader-title">Moi Forces Academy</h2>
+            <p class="loader-subtitle">Excellence, Our Commitment</p>
+            <div class="loader-progress-track">
+                <span class="loader-progress-fill"></span>
+            </div>
+            <div class="loader-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header class="header" id="header">
         <nav class="navbar">

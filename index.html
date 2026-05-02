@@ -25,9 +25,10 @@
     <script>
         (function() {
             try {
-                if (!localStorage.getItem('mfa_loader_seen')) {
+                var sessionSeenKey = 'mfa_loader_seen_session';
+                if (!sessionStorage.getItem(sessionSeenKey)) {
                     document.documentElement.classList.add('show-initial-loader');
-                    localStorage.setItem('mfa_loader_seen', 'true');
+                    sessionStorage.setItem(sessionSeenKey, 'true');
                 }
             } catch (error) {
                 document.documentElement.classList.add('show-initial-loader');

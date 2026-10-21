@@ -37,7 +37,7 @@
     </script>
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css?v=2.4">
+    <link rel="stylesheet" href="css/styles.css?v=2.7">
     
 </head>
 <body class="home-page">
@@ -76,12 +76,22 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="academics.html" class="nav-link">Academics</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="nav-link">Discover MFA <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="boarding.html">Boarding Life</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="academics.html" class="nav-link">Learning <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academics.html">Academics</a></li>
+                            <li><a href="activities.html">Co-curricular</a></li>
+                        </ul>
+                    </li>
                     <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-                    <li><a href="activities.html" class="nav-link">Co-curricular</a></li>
-                    <li><a href="boarding.html" class="nav-link">Boarding Life</a></li>
                     <li><a href="news.html" class="nav-link">News & Events</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -95,12 +105,8 @@
             <div class="hero-slide active" style="background-image: url('images/EDITED-63.jpg')">
                 
                 <div class="hero-content">
-                    <h2 class="hero-title" data-aos="fade-up">Welcome to Moi Forces Academy</h2>
+                    <h2 class="hero-title" data-aos="fade-up">Moi Forces Academy</h2>
                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Where we've been shaping young minds into tomorrow's leaders since 1975</p>
-                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                        <a href="admissions.html" class="btn btn-primary">Join Us</a>
-                        <a href="about.html" class="btn btn-outline">Our Story</a>
-                    </div>
                 </div>
             </div>
             
@@ -120,34 +126,17 @@
                 
                 <div class="hero-content">
                     <h2 class="hero-title" data-aos="fade-up">Life at MFA is More Than Classes</h2>
-                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">From the sports field to the music room, we believe in developing the whole person</p>
-                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                        <a href="activities.html" class="btn btn-primary">See What We Do</a>
-                        <a href="contact.html" class="btn btn-outline">Visit Us</a>
-                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Slider Controls -->
-        <button class="slider-control prev" aria-label="Previous slide">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="slider-control next" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        
-        <div class="slider-indicators">
-            <button class="indicator active" aria-label="Slide 1"></button>
-            <button class="indicator" aria-label="Slide 2"></button>
-            <button class="indicator" aria-label="Slide 3"></button>
-        </div>
     </section>
 
     <!-- About Section -->
     <section class="about-preview section-padding" id="about-preview">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header about-section-header" data-aos="fade-up">
+                <p class="about-kicker">Moi Forces Academy · Est. 1975</p>
                 <h2 class="section-title">Who We Are</h2>
                 <div class="title-underline"></div>
                 <p class="section-subtitle">50 years of shaping Kenya's future, one student at a time</p>
@@ -161,19 +150,19 @@
                     <p>Walk through our campus on any given day and you'll see what makes us different. There's the Form 3 student helping a Form 1 with Math. The debate team practicing for nationals. Our cadet corps marching with pride. The art students painting the sunset. This is where hard work meets discovery, where discipline builds confidence, and where lifelong friendships are formed.</p>
                     
                     <div class="core-pillars">
-                        <div class="pillar">
+                        <div class="pillar" data-aos="fade-up">
                             <i class="fas fa-book-open"></i>
                             <h4>Solid Academics</h4>
                         </div>
-                        <div class="pillar">
+                        <div class="pillar" data-aos="fade-up" data-aos-delay="100">
                             <i class="fas fa-shield-alt"></i>
                             <h4>Strong Values</h4>
                         </div>
-                        <div class="pillar">
+                        <div class="pillar" data-aos="fade-up" data-aos-delay="200">
                             <i class="fas fa-users"></i>
                             <h4>Real Leadership</h4>
                         </div>
-                        <div class="pillar">
+                        <div class="pillar" data-aos="fade-up" data-aos-delay="300">
                             <i class="fas fa-flag"></i>
                             <h4>Kenyan Pride</h4>
                         </div>
@@ -258,12 +247,12 @@
                 </div>
                 
                 <div class="activity-card" data-aos="flip-left" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1601116959905-46e67b7ea743?w=600&h=400&fit=crop" alt="Cadet training">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" alt="STEM activities">
                     <div class="activity-overlay">
                         <div class="activity-content">
-                            <i class="fas fa-medal"></i>
-                            <h3>Cadets Program</h3>
-                            <p>Leadership training, discipline & military excellence</p>
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>STEM & Innovation</h3>
+                            <p>Robotics, coding, science projects and maker-focused clubs</p>
                         </div>
                     </div>
                 </div>
@@ -377,7 +366,7 @@
                         </div>
                         <h3>MFA Students Excel in National Examinations</h3>
                         <p>Our students have once again demonstrated excellence with outstanding KCSE results, maintaining our position as one of the top-performing schools in the country.</p>
-                        <a href="news.html#news-1" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="news-story.html?story=kcse-results" class="read-more">View Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
@@ -396,7 +385,7 @@
                         </div>
                         <h3>Rugby Team Wins Regional Championship</h3>
                         <p>The MFA rugby team has clinched the regional championship title after a thrilling final match, showcasing exceptional teamwork and skill.</p>
-                        <a href="news.html#news-2" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="news-story.html?story=rugby-regional-title" class="read-more">View Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
@@ -415,7 +404,7 @@
                         </div>
                         <h3>Annual Open Day - Join Us!</h3>
                         <p>We invite prospective students and parents to our annual open day. Tour our facilities, meet our staff, and experience the MFA difference firsthand.</p>
-                        <a href="news.html#news-3" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="news-story.html?story=annual-open-day" class="read-more">View Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -520,6 +509,6 @@
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Main JavaScript -->
-    <script src="js/script.js?v=2.4"></script>
+    <script src="js/script.js?v=2.6"></script>
 </body>
 </html>

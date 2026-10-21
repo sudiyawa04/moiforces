@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full news story from Moi Forces Academy.">
+    <title>News Story - Moi Forces Academy</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=2.7">
+    <style>
+        .story-layout {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .story-image-wrap {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .story-image-wrap img {
+            width: 100%;
+            height: clamp(260px, 45vw, 460px);
+            object-fit: cover;
+            display: block;
+        }
+
+        .story-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .story-headline {
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            line-height: 1.25;
+        }
+
+        .story-intro {
+            font-size: 1.08rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+
+        .story-body p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .story-cta {
+            margin-top: var(--spacing-md);
+            display: flex;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .story-layout {
+                padding: 0 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo-wrapper">
+                    <img src="images/logo.png" alt="Moi Forces Academy Logo" class="logo">
+                    <div class="school-name">
+                        <h1>Moi Forces Academy</h1>
+                        <p class="tagline">Excellence, Our Commitment</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="nav-link">Discover MFA <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="boarding.html">Boarding Life</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="academics.html" class="nav-link">Learning <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academics.html">Academics</a></li>
+                            <li><a href="activities.html">Co-curricular</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="news.html" class="nav-link active">News & Events</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&h=600&fit=crop'); margin-top: 0;">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Full Story</h1>
+                <p id="storyHeroLead">Detailed update from MFA</p>
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li id="storyBreadcrumb">Story</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <article class="story-layout" id="storyContainer"></article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Moi Forces Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const stories = {
+            'kcse-results': {
+                category: 'Academic Excellence',
+                author: 'Academic Office',
+                date: 'January 15, 2025',
+                title: 'MFA Achieves Outstanding KCSE Results 2024',
+                image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=700&fit=crop',
+                intro: 'Moi Forces Academy has once again posted exceptional KCSE performance, reinforcing its position as a top-performing institution nationally.',
+                body: [
+                    'In the 2024 KCSE examinations, the school recorded a 98% overall success rate with a mean score of 8.5. A total of 85% of candidates met the direct university entry requirement.',
+                    'The school produced 15 straight-A candidates, with outstanding cluster performance in Mathematics, Chemistry, Biology, and English. Department heads credited the improvement to regular subject clinics and data-driven academic tracking.',
+                    'Speaking after the release of results, school leadership thanked parents, teachers, and students for their discipline and consistency. The administration also announced expanded mentorship sessions for the next candidate class.'
+                ]
+            },
+            'rugby-regional-title': {
+                category: 'Sports',
+                author: 'Sports Department',
+                date: 'October 8, 2025',
+                title: 'Rugby Team Wins Regional Championship',
+                image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&h=700&fit=crop',
+                intro: 'MFA rugby team delivered a spirited and tactical performance to secure the regional championship title.',
+                body: [
+                    'After a tightly contested final, MFA edged past their opponents through disciplined defense, quick transitions, and strong set-piece execution.',
+                    'The coaching unit highlighted the team\'s preparation standards, including fitness blocks, review sessions, and captain-led communication drills during pressure moments.',
+                    'With the regional title secured, focus now shifts to national-level competition where MFA aims to build on momentum and challenge for top honors.'
+                ]
+            },
+            'annual-open-day': {
+                category: 'Events',
+                author: 'Administration',
+                date: 'November 25, 2025',
+                title: 'Annual Open Day - Join Us!',
+                image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&h=700&fit=crop',
+                intro: 'MFA invites prospective families to the annual open day for a first-hand experience of school life, learning, and culture.',
+                body: [
+                    'The event will feature guided campus tours, classroom showcases, live activity demonstrations, and student-led conversations with visiting families.',
+                    'Parents will engage directly with school leadership, admissions, and academic heads to understand expectations, support systems, and performance pathways.',
+                    'Registration opens from 8:30 AM, and families are encouraged to arrive early for the complete programme experience.'
+                ]
+            },
+            'basketball-county-title': {
+                category: 'Sports',
+                author: 'Sports Desk',
+                date: 'January 10, 2025',
+                title: 'MFA Basketball Team Wins County Championship',
+                image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200&h=700&fit=crop',
+                intro: 'The basketball team captured county glory after a high-intensity final that showcased composure and teamwork.',
+                body: [
+                    'MFA defeated St. Mary\'s School 78-72 in a dramatic championship game. The match remained close throughout all four quarters.',
+                    'The coaching bench credited the win to disciplined rotations, perimeter defense, and effective late-game shot selection.',
+                    'The title is expected to boost team confidence ahead of regional fixtures and inter-school invitational tournaments.'
+                ]
+            },
+            'science-fair-winners': {
+                category: 'Academic',
+                author: 'Academic Office',
+                date: 'January 8, 2025',
+                title: 'Students Excel at National Science Fair',
+                image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=700&fit=crop',
+                intro: 'MFA students secured top national science fair placements through practical innovation and strong technical presentation.',
+                body: [
+                    'Three student teams earned recognition for projects in renewable energy systems, AI-supported diagnostics, and water quality monitoring.',
+                    'Judges praised the projects for local relevance, clarity of execution, and strong experimental documentation.',
+                    'The science department announced that selected prototypes will be refined for regional innovation expos and mentorship partnerships.'
+                ]
+            },
+            'choir-regional-gold': {
+                category: 'Culture',
+                author: 'Arts Department',
+                date: 'January 5, 2025',
+                title: 'School Choir Wins Gold at Regional Music Festival',
+                image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=1200&h=700&fit=crop',
+                intro: 'The choir delivered a standout performance and returned with gold distinctions in multiple categories.',
+                body: [
+                    'Competing against leading schools in the region, MFA won gold in both classical repertoire and traditional performance classes.',
+                    'The adjudication panel commended pitch discipline, stage confidence, and the choir\'s expressive interpretation of set pieces.',
+                    'Arts teachers confirmed preparations are underway for the national showcase with expanded rehearsal and technique clinics.'
+                ]
+            },
+            'cadet-national-award': {
+                category: 'Cadet',
+                author: 'Cadet Unit',
+                date: 'January 3, 2025',
+                title: 'MFA Cadet Unit Named Best in National Competition',
+                image: 'https://images.unsplash.com/photo-1601116959905-46e67b7ea743?w=1200&h=700&fit=crop',
+                intro: 'The cadet unit was recognized as the best overall at the national championships after strong performances across all assessed areas.',
+                body: [
+                    'MFA excelled in drill discipline, command execution, and leadership simulation tasks, finishing ahead of top-ranked competing schools.',
+                    'Unit trainers praised student commitment, noting that preparation combined structured routines with peer mentorship and accountability.',
+                    'The award reinforces the school\'s long-standing focus on discipline, leadership development, and service-oriented character formation.'
+                ]
+            },
+            'debate-national-finals': {
+                category: 'Academic',
+                author: 'Debate Club',
+                date: 'December 28, 2024',
+                title: 'Debate Team Reaches National Finals',
+                image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=700&fit=crop',
+                intro: 'MFA debate team qualified for the national finals after a season of consistently high-level performances.',
+                body: [
+                    'The team advanced through regional elimination rounds with strong argument structure, rebuttal discipline, and confident public speaking.',
+                    'Debaters benefited from weekly mock sessions, adjudicator feedback, and cross-team peer review to sharpen performance.',
+                    'Club patrons say the result reflects sustained effort and a growing culture of analytical communication among students.'
+                ]
+            },
+            'cleanup-tree-planting': {
+                category: 'Community',
+                author: 'Community Service',
+                date: 'December 20, 2024',
+                title: 'Students Lead Environmental Cleanup Initiative',
+                image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=700&fit=crop',
+                intro: 'More than 200 students joined a large-scale community cleanup and tree-planting activity.',
+                body: [
+                    'The initiative collected over two tons of waste in surrounding neighborhoods while creating environmental awareness among local residents.',
+                    'Students also planted 500 trees in designated restoration areas with support from local environmental groups and community leaders.',
+                    'School leadership confirmed follow-up activities will continue each term to promote long-term sustainability and civic responsibility.'
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const storyId = params.get('story');
+        const story = stories[storyId];
+        const container = document.getElementById('storyContainer');
+        const heroLead = document.getElementById('storyHeroLead');
+        const breadcrumb = document.getElementById('storyBreadcrumb');
+
+        if (!story) {
+            heroLead.textContent = 'Story could not be found';
+            breadcrumb.textContent = 'Not Found';
+            container.innerHTML = `
+                <div class="section-header text-center">
+                    <h2 class="section-title">Story Not Found</h2>
+                    <p class="section-subtitle">This story link may have changed.</p>
+                    <a href="news.html" class="btn btn-primary">Back to News</a>
+                </div>
+            `;
+        } else {
+            document.title = `${story.title} - Moi Forces Academy`;
+            heroLead.textContent = story.title;
+            breadcrumb.textContent = story.title;
+
+            const bodyParagraphs = story.body.map(paragraph => `<p>${paragraph}</p>`).join('');
+
+            container.innerHTML = `
+                <div class="story-image-wrap" data-aos="fade-up">
+                    <img src="${story.image}" alt="${story.title}">
+                </div>
+                <div class="story-meta" data-aos="fade-up">
+                    <span><i class="fas fa-tag"></i> ${story.category}</span>
+                    <span><i class="fas fa-user"></i> ${story.author}</span>
+                    <span><i class="fas fa-calendar"></i> ${story.date}</span>
+                </div>
+                <h2 class="story-headline" data-aos="fade-up">${story.title}</h2>
+                <p class="story-intro" data-aos="fade-up">${story.intro}</p>
+                <div class="story-body" data-aos="fade-up">${bodyParagraphs}</div>
+                <div class="story-cta" data-aos="fade-up">
+                    <a href="news.html" class="btn btn-primary">Back to News</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            `;
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

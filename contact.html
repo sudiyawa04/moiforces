@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=2.3">
+    <link rel="stylesheet" href="css/styles.css?v=2.7">
 </head>
 <body>
     <!-- Header -->
@@ -29,12 +29,22 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="academics.html" class="nav-link">Academics</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="nav-link">Discover MFA <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="boarding.html">Boarding Life</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="academics.html" class="nav-link">Learning <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academics.html">Academics</a></li>
+                            <li><a href="activities.html">Co-curricular</a></li>
+                        </ul>
+                    </li>
                     <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-                    <li><a href="activities.html" class="nav-link">Co-curricular</a></li>
-                    <li><a href="boarding.html" class="nav-link">Boarding Life</a></li>
                     <li><a href="news.html" class="nav-link">News & Events</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
@@ -677,3 +687,4 @@
     </script>
 </body>
 </html>
+
